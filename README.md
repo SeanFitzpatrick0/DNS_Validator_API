@@ -2,11 +2,11 @@
 Contains functions for validating and comparing DNS names 
 
 ## Whats here:
-include->   DNS_Validator.h (This is the header file used for function definitions)
-src->       DNS_Validator.c	(Contains source code for API functions)
-            DNS_Validator_Tests.c	(Testing for functions. See here for example uses)
-            Makefile  (Used for comiling files)
-            obj->   (Contains the object files)
+- include->   DNS_Validator.h (This is the header file used for function definitions)\n
+- src->       DNS_Validator.c	(Contains source code for API functions)
+              DNS_Validator_Tests.c	(Testing for functions. See here for example uses)
+              Makefile  (Used for comiling files)
+              obj->   (Contains the object files)
             
 ## Setup:
 To start clone this repo.
