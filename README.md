@@ -52,7 +52,7 @@ SUCCESS: www.tcd.ie and www.tcf.ie are different DNS and failed.
 ```
 int checkDNSValid(char *str);
 ```
-Determines if a given DNS is valid. Takes a null-terminated string and returns 
+Determines if a given DNS name is valid. Takes a null-terminated string and returns 
 1: If valid/true, 
 0: If invalid/false 
 A DNS name is valid if it meets the following:
@@ -65,3 +65,12 @@ A DNS name is valid if it meets the following:
 - Valid label characters are digits(0-9), letters(A-Z) upper or lower, or a dash "-" or underscore "_" character.
 - The last lable in the name (ignoring the trailing dot) may not contain a dash (“-”), underscore (“_”) or any digits, 
   unless it starts with the string "xn--" (for internationalised top-level domain names).
+```
+int compareDNSNames(char *str1, char *str2);
+```
+Determines if two given DNS names are the same. Takes DNS names as null-terminated string and returns 
+1: If same/true, 
+0: If different/false 
+- If either DNS name is an invalid DNS name, it will return false.
+- If either DNS name has a trailing dot, it will be ignored.
+eg: “www.tcd.ie” and “WwW.TcD.IE.” are the same.
