@@ -11,7 +11,8 @@
 
 /*! * @brief: Determines if a given DNS is valid * @input: A pointer to the 
 DNS name as a null-terminated string. * @return: 1: If valid/true, 0: If 
-invalid/false */ int checkDNSValid(char *str) {
+invalid/false */ 
+int checkDNSValid(char *str) {
     //NULL check
     if(str==NULL){
         return 0; //False
@@ -48,7 +49,8 @@ invalid/false */ int checkDNSValid(char *str) {
 function for checkDNSValid and * is not recommended to be used on its own. 
 * @input: A pointer to the start of the DNS label within * the full name as 
 a null-terminated string. * @return: 1: If valid/true, 0: If invalid/false 
-*/ int checkDNSlabelValid(char *str) {
+*/ 
+int checkDNSlabelValid(char *str) {
     char *res = strchr(str, '.');
     int labelLen;
     //Check if last label
@@ -90,7 +92,8 @@ a null-terminated string. * @return: 1: If valid/true, 0: If invalid/false
 invalid it will return False * @input: A pointer to the 1st DNS name as a 
 null-terminated string. * @input: A pointer to the 2nd DNS name as a 
 null-terminated string. * @return: 1: If same/true, 0: If different/false 
-*/ int compareDNSNames(char *str1, char *str2){
+*/ 
+int compareDNSNames(char *str1, char *str2){
     //Check if valid
     if(!checkDNSValid(str1)||!checkDNSValid(str2)){
         return 0; //false
